@@ -1,0 +1,4 @@
+Store,Naive MAE,MovingAvg MAE,ExpSmoothing MAE,GradientBoosting MAE,Best Model
+Astoria,78.08,74.43,72.74,88.89,Exp Smoothing
+Hell's Kitchen,99.08,101.5,99.88,97.38,Gradient Boosting
+Lower Manhattan,104.52,71.29,65.87,84.83,Exp Smoothing
