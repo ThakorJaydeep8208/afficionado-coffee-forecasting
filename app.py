@@ -15,7 +15,7 @@ st.markdown("---")
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"D:\project\Afficionado Coffee Roasters.xlsx - Transactions.csv")
+    df = pd.read_csv(r"D:\project\Afficionado Coffee Roasters.xlsx - Transactions.csv")df = pd.read_csv("https://raw.githubusercontent.com/ThakorJaydeep8208/afficionado-coffee-forecasting/main/Afficionado Coffee Roasters.xlsx - Transactions.csv")
     df['transaction_time'] = pd.to_datetime(df['transaction_time'], format='%H:%M:%S')
     df['hour'] = df['transaction_time'].dt.hour
     df['revenue'] = df['transaction_qty'] * df['unit_price']
@@ -125,7 +125,7 @@ st.plotly_chart(fig_products, use_container_width=True)
 # --- Model Comparison ---
 st.subheader("📊 Model Performance Comparison")
 try:
-    results = pd.read_csv(r"D:\project\model_results.csv")
+results = pd.read_csv("https://raw.githubusercontent.com/ThakorJaydeep8208/afficionado-coffee-forecasting/main/model_results.csv")
     fig_comp = px.bar(results, x='Store', y=['Naive MAE', 'MovingAvg MAE', 'ExpSmoothing MAE', 'GradientBoosting MAE'],
                       barmode='group', title='MAE by Model and Store (lower = better)',
                       labels={'value': 'MAE ($)', 'variable': 'Model'})
